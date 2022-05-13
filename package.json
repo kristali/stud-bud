@@ -1,0 +1,19 @@
+{
+  "name": "stud-bud",
+  "version": "1.0.0",
+  "description": "Web application for studying",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristali/stud-bud.git"
+  },
+  "author": "Kristal Solidarios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristali/stud-bud/issues"
+  },
+  "homepage": "https://github.com/kristali/stud-bud#readme"
+}
