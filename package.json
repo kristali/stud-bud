@@ -3,9 +3,10 @@
   "name": "stud-bud",
   "version": "1.0.0",
   "description": "Web application for studying",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "prestart": "parcel build ./public/index.html",
     "dev": "parcel serve ./public/index.html"
   },
