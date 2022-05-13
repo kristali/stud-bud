@@ -1,0 +1,31 @@
+
+//----- DASHBOARD: MY TASKS LIST -----//
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+    
+  .task-list {
+    grid-area: task-list;
+    padding-top: 0;
+  }
+
+  .task-list ul{
+    height: 25vh;
+    padding: .5rem 1rem;;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .task-list article{
+    background-color: powderblue;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px darkgrey;
+  }
+  
+
+

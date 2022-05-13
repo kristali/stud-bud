@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2C3749;
+    height: 80px;
+    width: 100%;
+
+    .nav-item{
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+
+        li{
+            list-style: none;
+        }
+        
+        a{
+            color:#828EA0;
+            text-decoration: none;
+        }
+    }
+
+}

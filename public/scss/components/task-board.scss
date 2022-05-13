@@ -1,0 +1,39 @@
+#task-board-container{
+    display: flex;
+    height: 60vh;
+    width: 95vw;
+    padding: 1rem;
+    overflow: hidden;
+    overflow-x: auto;
+    margin:0 auto;
+}
+
+.statusColumn{
+    display: inline-block;
+    position: relative;
+    background-color:darkgray;
+    min-width: 20vw;
+    padding: 5px;
+    margin: 0 30px;
+    border-radius: 30px;
+
+    .status-title{
+        background-color: paleturquoise;
+        padding: 10px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .task-list ul{
+        height: 45vh;
+    }
+}
+
+.to_do .taskCard{
+    background-color: red;
+}
+.in_progress .taskCard{
+    background-color: blue;
+}
+

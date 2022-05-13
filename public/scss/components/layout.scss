@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-size: cover;
+}
+
+/* .dashboard-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+    height: 80vh;
+    margin: 30px 70px;
+    
+    grid-template-areas:
+      "avatar goals goals"
+      "avatar task-list task-list"
+      "avatar task-list task-list";
+  }
+  
+  .avatar{grid-area: avatar;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: gray;}
+  
+  .goals { grid-area: goals;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: white;}
+  
+  .task-list-container { grid-area: task-list;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: white;}
+*/
+  .task-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: -30px;
+    column-gap: 25px;
+  } 
+
+  .dashboard-grid-container {  display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px 10px;
+    height: 80vh;
+    margin: 20px 70px 50px;
+    grid-template-areas:
+      "avatar goals"
+      "avatar task-list-container"
+      "avatar task-list-container";
+  }
+  
+  .avatar {
+    grid-area: avatar;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: gray;}
+  
+  .goals { grid-area: goals;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: white;}  
+  
+  .task-list-container {
+    display: grid;
+    max-height: 50vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:  10px 30px;
+    grid-template-areas:
+      "header header header"
+      "task-list task-list task-list"
+      "task-list task-list task-list";
+    grid-area: task-list-container;
+    background-color: white;
+    border-radius: 30px;
+  }
+
+ 
