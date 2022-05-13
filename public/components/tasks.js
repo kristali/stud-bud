@@ -16,7 +16,7 @@ var estimatedTimeMinInput = document.getElementById("estimatedTimeMinInput");
 var priorityInput = document.getElementsByName("priority");
 
 //Function: Task form submit
-taskForm.addEventListener("submit", function (event) {
+taskform.addEventListener("submit", function (event) {
   event.preventDefault();
   //validate input values
   let task = taskInput.value;
@@ -161,7 +161,7 @@ close_btns.forEach((btn) => {
     🟥 🟥  Task cards wont drop into newly created columns
 */
 const taskCards = document.querySelectorAll(".taskCard");
-const allCol = document.querySelectorAll(".statusColumn ul");
+const constantCols = document.querySelectorAll("#task-board-container .dropCol");
 let draggableTask = null;
 
 taskCards.forEach((taskCard) => {
@@ -185,7 +185,7 @@ function dragEnd() {
   console.log("dragEnd");
 }
 
-allCol.forEach(dropCol => {
+constantCols.forEach(dropCol => {
   dropCol.addEventListener("dragover", dragOver);
   dropCol.addEventListener("dragenter", dragEnter);
   dropCol.addEventListener("dragleave", dragLeave);
@@ -217,29 +217,40 @@ function dragDrop() {
 /*
     🟥 add value to newly added cols & add this to status menu  
 */
-const container = document.querySelector("#task-board-container")
+const container = document.getElementById("task-board-container");
 var colInput = document.getElementById("columnInput");
 var setVal = document.getElementById("templ_status_col");
 const addColButton = document.querySelector("#columnForm > button")
 
-//Event listener for creating a column when add col btn is pressed
-addColButton.addEventListener("click", createColumn);
 
-function createColumn(){
+addColButton.addEventListener("click", () => {
   event.preventDefault();
-  //Create clone of column 'template' & append to board container when saved
-  var t = document.getElementsByTagName("template")[0];
-  var clone = t.content.cloneNode(true);
-  container.appendChild(clone);
-  //Create column title based on user input value
+  const newCol = document.createElement('div');
+  newCol.classList.add("statusColumn");
   let colName = colInput.value;
-  templ_col_title.innerHTML = colName;
-  tasklist.classList.add("e");
-  //console.log(colName);
+  //input user input as column value
+  newCol.setAttribute("value", colName);
+
+  //Adding DOM elements of columns
+  //input user input as tile and id
+  newCol.innerHTML = `
+      <div class="status-title">
+        <h3>${colName}</h3>
+        <button class="btn editCol" style="background:none; color: #404040;"><i class='fa fa-edit'></i>
+        </button>
+      </div>
+      <div id="taskList" class="task-list">
+        <ul class="dropCol" id="${colName}">
+        </ul>
+      </div>
+    </div>
+      `
+  container.append(newCol);
+
   //update visibility of modal & overlay form when opened/closed
   addColumnModal.classList.remove("active");
-  overlay.classList.remove("active");
+  overlay.classList.remove("active"); 
+});
 
-}
 /*-------- end ADD TASK BOARD COLUMN end --------*/
 
