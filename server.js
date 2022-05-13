@@ -1,7 +1,10 @@
+//Import express
 const express = require('express');
 
+//Itinitalise
 const app = express();
 
+//Serve static files from public
 app.use(express.static(__dirname + '/dist'));
 
 app.get('/', function(req, res) {
