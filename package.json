@@ -1,11 +1,13 @@
+
 {
   "name": "stud-bud",
   "version": "1.0.0",
   "description": "Web application for studying",
-  "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,3 +23,5 @@
     "express": "^4.18.1"
   }
 }
+
+
